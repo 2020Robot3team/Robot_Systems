@@ -26,84 +26,69 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	   return -EFAULT;
 
 
-	 if(c == 'robosys'){ //ロボットシステム学　
-	                gpio_base[7] = 1 << 25;// - 
-	                msleep(600);
+	 if(c == 'robosys'){
+	                gpio_base[7] = 1 << 25; 
+	                msleep(300);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
-
-		        gpio_base[7] = 1 << 25;// . 
-	       	        msleep(200);
-	                gpio_base[10] = 1 << 25;
-		        msleep(100);
-
-		        gpio_base[7] = 1 << 25;// - 
-		        msleep(600);
-    		        gpio_base[10] = 1 << 25;
-		        msleep(100);
-
-		        gpio_base[7] = 1 << 25;// . 
-		        msleep(200);
+		        gpio_base[7] = 1 << 25; 
+	       	        msleep(100);
 		        gpio_base[10] = 1 << 25;
-		        msleep(100);
-		        msleep(600);
-	
-	 } else if(c == 'meka2'){ //メカニクス2  A
-		        gpio_base[7] = 1 << 25;// .  
-	                msleep(200);
+		        msleep (100);                                                                                                        gpio_base[7] = 1 << 25;                                                                                              msleep(300);
+             		gpio_base[10] = 1 << 25;
+	                msleep(100);												             gpio_base[7] = 1 << 25;
+                        msleep(100);
+	                gpio_base[10] = 1 << 25;
+		        msleep(1000);		      
+
+	 } else if(c == 'meka2'){
+		        gpio_base[7] = 1 << 25;  
+	                msleep(100);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
-
-		        gpio_base[7] = 1 << 25;// -
-		        msleep(600);
+		        gpio_base[7] = 1 << 25;
+		        msleep(300);
 	                gpio_base[10] = 1 << 25;
-		        msleep(100);
-		        msleep(600);
+		        msleep(1000);
 
-	 }  else if(c == 'english'){ // 英語　S  
-		        gpio_base[7] = 1 << 25;// .   
-	                msleep(200);
+	 }  else if(c == 'english'){
+		        gpio_base[7] = 1 << 25;   
+	                msleep(100);
 	                gpio_base[10] = 1 << 25;
 	                msleep(100);
-
-	                gpio_base[7] = 1 << 25;// .   
-                        msleep(200);
+	                gpio_base[7] = 1 << 25;   
+                        msleep(100);
                         gpio_base[10] = 1 << 25;                                                                                             msleep(100);
+                        gpio_base[7] = 1 << 25;
+                        msleep(100);
+                        gpio_base[10] = 1 << 25;                                                                                             msleep(1000);    
 
-                        gpio_base[7] = 1 << 25;// .   
-                        msleep(200);
-                        gpio_base[10] = 1 << 25;                                                                                             msleep(100);    
-                        msleep(600);
-
-	 }  else if(c == 'physics') //　物理 A　
-		        gpio_base[7] = 1 << 25;// .   
-	                msleep(200);
+	 }  else if(c == 'physics'){
+		        gpio_base[7] = 1 << 25;   
+	                msleep(100);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
+		        gpio_base[7] = 1 << 25; 
+		        msleep(300);
+	                gpio_base[10] = 1 << 25;
+		        msleep(1000);
 
-		        gpio_base[7] = 1 << 25;// - 
-		        msleep(600);
+         }  else if(c == 'manipulator') {
+	                gpio_base[7] = 1 << 25;
+	                msleep(300);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
-
-         }  else if(c == 'manipulator') // マニュピュレータ　D  
-	                gpio_base[7] = 1 << 25;// - 
-	                msleep(600);
-	                gpio_base[10] = 1 << 25;
+		        gpio_base[7] = 1 << 25; 
 		        msleep(100);
-
-		        gpio_base[7] = 1 << 25;// .  
-		        msleep(200);
 		        gpio_base[10] = 1 << 25;
 		        msleep(100);
-
-			gpio_base[7] = 1 << 25;// . 
-		        msleep(200);
-		        gpio_base[10] = 1 << 25;
+			gpio_base[7] = 1 << 25; 
 		        msleep(100);
+		        gpio_base[10] = 1 << 25;
+		        msleep(1000);
 
-	}     else{     //それ以外が入力
-		         gpio_base[7] = 1 << 25;//3秒点灯
+	}     else{
+		         gpio_base[7] = 1 << 25;
 			 msleep(3000);
 			 gpio_base[10] = 1 << 25;
 			 msleep(100);
@@ -115,7 +100,7 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 static ssize_t sushi_read(struct file* filp, char* buf, size_t count, loff_t* pos)
 {
 	         int size = 0;
-	         char sushi[] = {'u','n','k','o',0x0A}; //寿司の絵文字のバイナリ
+	         char sushi[] = {'u','n','k','o',0x0A};
 		 if(copy_to_user(buf+size,(const char *)sushi, sizeof(sushi))){
 		   printk( KERN_INFO "sushi : copy_to_user failed\n" );
 		   return -EFAULT;
@@ -176,8 +161,8 @@ static void __exit cleanup_mod(void)
 		iounmap(gpio_base);
 }
 
-module_init(init_mod);     // マクロで関数を登録
-module_exit(cleanup_mod);  // 同上
+module_init(init_mod);     
+module_exit(cleanup_mod);  
 
 
 
