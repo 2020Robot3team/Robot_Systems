@@ -26,72 +26,74 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	   return -EFAULT;
 
 
-	 if(c == 'robosys'){
+	 if(c == 'r'){
 	                gpio_base[7] = 1 << 25; 
-	                msleep(300);
+	                msleep(600);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
 		        gpio_base[7] = 1 << 25; 
-	       	        msleep(100);
+	       	        msleep(200);
 		        gpio_base[10] = 1 << 25;
-		        msleep (100);                                                                                                        gpio_base[7] = 1 << 25;                                                                                              msleep(300);
+		        msleep (100);                                                                                                        gpio_base[7] = 1 << 25;                                                                                              msleep(600);
              		gpio_base[10] = 1 << 25;
 	                msleep(100);												             gpio_base[7] = 1 << 25;
-                        msleep(100);
+                        msleep(200);
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);		      
 
-	 } else if(c == 'meka2'){
+	 } else if(c == 'M'){
 		        gpio_base[7] = 1 << 25;  
-	                msleep(100);
+	                msleep(200);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
 		        gpio_base[7] = 1 << 25;
-		        msleep(300);
+		        msleep(600);
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);
 
-	 }  else if(c == 'english'){
+	 }  else if(c == 'e'){
 		        gpio_base[7] = 1 << 25;   
-	                msleep(100);
+	                msleep(200);
 	                gpio_base[10] = 1 << 25;
 	                msleep(100);
 	                gpio_base[7] = 1 << 25;   
-                        msleep(100);
+                        msleep(200);
                         gpio_base[10] = 1 << 25;                                                                                             msleep(100);
                         gpio_base[7] = 1 << 25;
-                        msleep(100);
+                        msleep(200);
                         gpio_base[10] = 1 << 25;                                                                                             msleep(1000);    
 
-	 }  else if(c == 'physics'){
+	 }  else if(c == 'p'){
 		        gpio_base[7] = 1 << 25;   
-	                msleep(100);
+	                msleep(200);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
 		        gpio_base[7] = 1 << 25; 
-		        msleep(300);
+		        msleep(600);
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);
 
-         }  else if(c == 'manipulator') {
+         }  else if(c == 'm') {
 	                gpio_base[7] = 1 << 25;
-	                msleep(300);
+	                msleep(600);
 	                gpio_base[10] = 1 << 25;
 		        msleep(100);
 		        gpio_base[7] = 1 << 25; 
-		        msleep(100);
+		        msleep(200);
 		        gpio_base[10] = 1 << 25;
 		        msleep(100);
 			gpio_base[7] = 1 << 25; 
-		        msleep(100);
+		        msleep(200);
 		        gpio_base[10] = 1 << 25;
 		        msleep(1000);
 
 	}     else{
+		for (i = 0; i < 5; i++ ){
 		         gpio_base[7] = 1 << 25;
-			 msleep(3000);
+			 msleep(100);
 			 gpio_base[10] = 1 << 25;
 			 msleep(100);
+		}
 	}
 
 	 return 1;
