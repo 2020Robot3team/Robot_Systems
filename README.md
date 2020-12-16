@@ -24,10 +24,13 @@ $echo 科目系 > /dev/myled0で実行 <br>
 - 英語 "e"
 - ロボットマニュピュレータ"M"
 # 実行例
-
-# 動画　
-
-
+英語の場合、頭文字のeを入力　<br>
+(例)$echo e > /dev/myled0
+# 動画
+ロボットシステム学のrを入力　<br>
+<https://youtu.be/ZRvTmj3eVUU><br>
+メカニクス2のmを入力　<br>
+<https://youtu.be/yqfVk1uDf8c>
 
 
 # ライセンス
