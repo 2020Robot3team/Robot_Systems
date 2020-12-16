@@ -6,9 +6,9 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - Ubuntu 18.04LTS
 - LED
 - ブレッドボード
-- 抵抗　
+- 300Ω抵抗　
 # 回路
-Rasberry pi の22pinに＋端子　　
+Rasberry pi の22pinに＋端子<br>　　
 35pinに－端子を指す
 
 # 実行手順
