@@ -7,14 +7,12 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - LED
 - ブレッドボード
 - 300Ω抵抗　
-# 回路
-Rasberry pi の22pinに＋端子<br>　　
-35pinに－端子を指す
 
 # 実行手順
-<https://github.com/2020Robot3team/Robot_Systems>より
-コードをコピーし
-'git clone'でぺーストしインストールしてください。
+git clone<https://github.com/2020Robot3team/Robot_Systems>より <br>
+リポジトリのインストール <br>
+$cd Robot_Systems <br>
+
 
 
 
