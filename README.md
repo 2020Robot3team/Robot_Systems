@@ -8,8 +8,8 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - ブレッドボード
 - 抵抗　
 # 回路
-Rasberry pi の22pinに＋端子　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-　　35pinに－端子を指す
+Rasberry pi の22pinに＋端子　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+35pinに－端子を指す
 
 # 実行手順
 <https://github.com/2020Robot3team/Robot_Systems>より
