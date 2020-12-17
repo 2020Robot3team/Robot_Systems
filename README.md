@@ -32,5 +32,5 @@ $echo 科目系 > /dev/myled0で実行 <br>
 メカニクス2のmを入力　<br>
 <https://youtu.be/yqfVk1uDf8c>
 
-
 # ライセンス
+<https://github.com/Dansato1203/Robosys2020_devicedriver/blob/master/COPYING>
