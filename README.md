@@ -33,4 +33,4 @@ $echo 科目系 > /dev/myled0で実行 <br>
 <https://youtu.be/yqfVk1uDf8c>
 
 # ライセンス
-GNU General Public License v3.0
+<GNU General Public License v3.0>
