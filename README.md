@@ -34,3 +34,4 @@ $echo 科目系 > /dev/myled0で実行 <br>
 
 # ライセンス
 GNU General Public License v3.0
+<https://github.com/2020Robot3team/Robot_Systems/blob/main/LICENSE>
