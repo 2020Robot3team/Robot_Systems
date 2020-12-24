@@ -9,14 +9,14 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - 300Ω抵抗　
 
 # 実行手順
-`$git clone<https://github.com/2020Robot3team/Robot_Systems>より` <br>
+`$git clone<https://github.com/2020Robot3team/Robot_Systems>より` 
 `リポジトリのインストール `<br>
 `$cd Robot_Systems `<br>
 `$make`<br>
 `$sudo insmod myled.ko `<br>
 `$sudo mknod/dev/myled0 `<br>
 `$sudo chmod 666/dev/myled0` <br>
-`$echo 科目系 > /dev/myled0で実行` <br>
+`$echo 科目系 > /dev/myled0`で実行 <br>
     <br>
 - ロボットシステム学 `”r”`
 - メカニクス2 `"m"`
