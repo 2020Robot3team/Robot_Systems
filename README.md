@@ -10,7 +10,7 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 
 # 実行手順
 `$git clone<https://github.com/2020Robot3team/Robot_Systems>`より
-`リポジトリのインストール <br>
+リポジトリのインストール <br>
 `$cd Robot_Systems `<br>
 `$make`<br>
 `$sudo insmod myled.ko `<br>
