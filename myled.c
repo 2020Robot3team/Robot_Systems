@@ -34,9 +34,12 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 		        gpio_base[7] = 1 << 25; 
 	       	        msleep(200);
 		        gpio_base[10] = 1 << 25;
-		        msleep (100);                                                                                                        gpio_base[7] = 1 << 25;                                                                                              msleep(600);
+		        msleep (100); 
+		        gpio_base[7] = 1 << 25;                                                                                              
+		        msleep(600);
              		gpio_base[10] = 1 << 25;
-	                msleep(100);												             gpio_base[7] = 1 << 25;
+	                msleep(100);												             
+		        gpio_base[7] = 1 << 25;
                         msleep(200);
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);		      
@@ -58,10 +61,12 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	                msleep(100);
 	                gpio_base[7] = 1 << 25;   
                         msleep(200);
-                        gpio_base[10] = 1 << 25;                                                                                             msleep(100);
+                        gpio_base[10] = 1 << 25;                                                                                            
+		        msleep(100);
                         gpio_base[7] = 1 << 25;
                         msleep(200);
-                        gpio_base[10] = 1 << 25;                                                                                             msleep(1000);    
+                        gpio_base[10] = 1 << 25;                                                                                            
+		        msleep(1000);    
 
 	 }  else if(c == 'p'){
 		        gpio_base[7] = 1 << 25;   
