@@ -2,8 +2,8 @@
 ロボットシステム学の課題で作成したプログラムです。
 LEDの点滅の時間を調整しモールス信号として伝えます。
 # 環境
-- Rasberry pi ModelB
-- Ubuntu 18.04LTS
+- Rasberry pi 4 ModelB
+- Ubuntu 18.04 LTS
 - LED
 - ブレッドボード
 - 300Ω抵抗　
