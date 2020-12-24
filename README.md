@@ -25,7 +25,7 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - ロボットマニュピュレータ`"M"`
 # 実行例
 英語の場合、頭文字のeを入力　<br>
-`(例)$echo e > /dev/myled0`
+(例)`$echo e > /dev/myled0`
 # 動画
 ロボットシステム学のrを入力　<br>
 <https://youtu.be/ZRvTmj3eVUU><br>
