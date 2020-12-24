@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: GPL-3.0
+/*
+ *(c) 2020 Ina Syuichiro and Ueda Ryuichi
+ */
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
