@@ -23,95 +23,88 @@ static volatile u32 *gpio_base = NULL;
 
 static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_t* pos)
 {
-	 char c;
-	 int i;
+	char c;
+	int i;
 
-	 if(copy_from_user(&c,buf,sizeof(char)))
-	 return -EFAULT;
+	if(copy_from_user(&c,buf,sizeof(char)))
+		return -EFAULT;
 
-	 if(c == 'r')
-	 {
-	                gpio_base[7] = 1 << 25; 
-	                msleep(600);
-	                gpio_base[10] = 1 << 25;
-		        msleep(100);
-		        gpio_base[7] = 1 << 25; 
-	       	        msleep(200);
-		        gpio_base[10] = 1 << 25;
-		        msleep (100); 
-		        gpio_base[7] = 1 << 25;                                                                                              
-		        msleep(600);
-             		gpio_base[10] = 1 << 25;
-	                msleep(100);												             
-		        gpio_base[7] = 1 << 25;
-                        msleep(200);
-	                gpio_base[10] = 1 << 25;
-		        msleep(1000);		      
-
-	 } else if(c == 'M')
-	 {
-		        gpio_base[7] = 1 << 25;  
-	                msleep(200);
-	                gpio_base[10] = 1 << 25;
-		        msleep(100);
-		        gpio_base[7] = 1 << 25;
-		        msleep(600);
-	                gpio_base[10] = 1 << 25;
-		        msleep(1000);
-
-	 } else if(c == 'e')
-	 {
-		        gpio_base[7] = 1 << 25;   
-	                msleep(200);
-	                gpio_base[10] = 1 << 25;
-	                msleep(100);
-	                gpio_base[7] = 1 << 25;   
-                        msleep(200);
-                        gpio_base[10] = 1 << 25;                                                                                            
-		        msleep(100);
-                        gpio_base[7] = 1 << 25;
-                        msleep(200);
-                        gpio_base[10] = 1 << 25;                                                                                            
-		        msleep(1000);    
-
-	 } else if(c == 'p')
-	 {
-		        gpio_base[7] = 1 << 25;   
-	                msleep(200);
-	                gpio_base[10] = 1 << 25;
-		        msleep(100);
-		        gpio_base[7] = 1 << 25; 
-		        msleep(600);
-	                gpio_base[10] = 1 << 25;
-		        msleep(1000);
-
-         } else if(c == 'm') 
-	 {
-	                gpio_base[7] = 1 << 25;
-	                msleep(600);
-	                gpio_base[10] = 1 << 25;
-		        msleep(100);
-		        gpio_base[7] = 1 << 25; 
-		        msleep(200);
-		        gpio_base[10] = 1 << 25;
-		        msleep(100);
-			gpio_base[7] = 1 << 25; 
-		        msleep(200);
-		        gpio_base[10] = 1 << 25;
-		        msleep(1000);
-
-	}     else{
+	if(c == 'r'){
+		gpio_base[7] = 1 << 25;
+		msleep(600);
+		gpio_base[10] = 1 << 25;
+		msleep(100);
+		gpio_base[7] = 1 << 25; 
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep (100); 
+		gpio_base[7] = 1 << 25;                                                                                              
+		msleep(600);
+		gpio_base[10] = 1 << 25;
+		msleep(100);												             
+		gpio_base[7] = 1 << 25;
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep(1000);
+		 
+	} else if(c == 'M'){
+		gpio_base[7] = 1 << 25;  
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep(100);
+		gpio_base[7] = 1 << 25;
+		msleep(600);
+		gpio_base[10] = 1 << 25;
+		msleep(1000);
+		 
+	} else if(c == 'e'){
+		gpio_base[7] = 1 << 25;   
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep(100);
+		gpio_base[7] = 1 << 25;   
+		msleep(200);
+		gpio_base[10] = 1 << 25;                                                                                            
+		msleep(100);
+		gpio_base[7] = 1 << 25;
+		msleep(200);
+		gpio_base[10] = 1 << 25;                                                                                            
+		msleep(1000);
+		 
+	} else if(c == 'p'){
+		gpio_base[7] = 1 << 25;
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep(100);
+		gpio_base[7] = 1 << 25; 
+		msleep(600);
+		gpio_base[10] = 1 << 25;
+		msleep(1000);
+		 
+	} else if(c == 'm'){
+		gpio_base[7] = 1 << 25;
+		msleep(600);
+		gpio_base[10] = 1 << 25;
+		msleep(100);
+		gpio_base[7] = 1 << 25; 
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep(100);
+		gpio_base[7] = 1 << 25; 
+		msleep(200);
+		gpio_base[10] = 1 << 25;
+		msleep(1000);
+		 
+	} else{
 		for (i = 0; i < 5; i++ ){
-		         gpio_base[7] = 1 << 25;
-			 msleep(100);
-			 gpio_base[10] = 1 << 25;
-			 msleep(100);
+			gpio_base[7] = 1 << 25;
+			msleep(100);
+			gpio_base[10] = 1 << 25;
+			msleep(100);
 		}
 	}
-
-	 return 1;
+	return 1;
 }
-
 static ssize_t sushi_read(struct file* filp, char* buf, size_t count, loff_t* pos)
 {
 	         int size = 0;
