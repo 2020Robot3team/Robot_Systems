@@ -20,12 +20,12 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 `$git clone<https://github.com/2020Robot3team/Robot_Systems>`より <br>
 リポジトリのインストール
 # 使用方法
-`$cd Robot_Systems <br>
- $make <br>
- $sudo insmod myled.ko <br>
- $sudo mknod/dev/myled0 <br>
- $sudo chmod 666/dev/myled0 <br>
- $echo 科目系 > /dev/myled0`で実行 <br>
+`$cd Robot_Systems` <br>
+`$make` <br>
+`$sudo insmod myled.ko` <br>
+`$sudo mknod/dev/myled0` <br>
+`$sudo chmod 666/dev/myled0` <br>
+`$echo 科目系 > /dev/myled0`で実行 <br>
 - ロボットシステム学 `”r”`
 - メカニクス2 `"m"`
 - 物理 `"p"`
