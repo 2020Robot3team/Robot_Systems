@@ -11,6 +11,12 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 # 実行例
 英語の場合、頭文字のeを入力　<br>
 (例)`$echo e > /dev/myled0`
+          <br>
+- ロボットシステム学 ”r”
+- メカニクス2 "m"
+- 物理  "p"
+- 英語 "e"
+- ロボットマニュピュレータ"M"
 # 実行動画
 ロボットシステム学のrを入力　<br>
 <https://youtu.be/ZRvTmj3eVUU><br>
@@ -26,12 +32,6 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - `$sudo mknod/dev/myled0` <br>
 - `$sudo chmod 666/dev/myled0` <br>
 - `$echo 科目系 > /dev/myled0`で実行 <br>
-          <br>
-- ロボットシステム学 ”r”
-- メカニクス2 "m"
-- 物理  "p"
-- 英語 "e"
-- ロボットマニュピュレータ"M"
 # ライセンス
 GNU General Public License v3.0
 <https://github.com/2020Robot3team/Robot_Systems/blob/main/LICENSE>
