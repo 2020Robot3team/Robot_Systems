@@ -1,13 +1,13 @@
-# Robot_Systems
+# リポジトリの概要
 ロボットシステム学の課題で作成したプログラムです。
 LEDの点滅の時間を調整しモールス信号として伝えます。
-# 環境
+# 動作環境
 - Rasberry Pi 4 ModelB
 - Ubuntu 18.04 LTS
+#使用したもの
 - LED
 - ブレッドボード
-- 300Ω抵抗　
-
+- 300Ω抵抗
 # 実行手順
 `$git clone<https://github.com/2020Robot3team/Robot_Systems>`より
 リポジトリのインストール <br>
