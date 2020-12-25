@@ -26,6 +26,7 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - `$sudo mknod/dev/myled0` <br>
 - `$sudo chmod 666/dev/myled0` <br>
 - `$echo 科目系 > /dev/myled0`で実行 <br>
+          <br>
 - ロボットシステム学 ”r”
 - メカニクス2 "m"
 - 物理  "p"
