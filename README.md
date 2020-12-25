@@ -8,6 +8,11 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - LED
 - ブレッドボード
 - 300Ω抵抗
+# 動画
+ロボットシステム学のrを入力　<br>
+<https://youtu.be/ZRvTmj3eVUU><br>
+メカニクス2のmを入力　<br>
+<https://youtu.be/yqfVk1uDf8c>
 # 実行手順
 `$git clone<https://github.com/2020Robot3team/Robot_Systems>`より
 リポジトリのインストール <br>
