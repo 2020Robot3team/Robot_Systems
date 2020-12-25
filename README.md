@@ -8,7 +8,10 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - LED
 - ブレッドボード
 - 300Ω抵抗
-# 動画
+# 実行例
+英語の場合、頭文字のeを入力　<br>
+(例)`$echo e > /dev/myled0`
+# 実行動画
 ロボットシステム学のrを入力　<br>
 <https://youtu.be/ZRvTmj3eVUU><br>
 メカニクス2のmを入力　<br>
@@ -28,9 +31,6 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 - 物理 `"p"`
 - 英語 `"e"`
 - ロボットマニュピュレータ`"M"`
-# 実行例
-英語の場合、頭文字のeを入力　<br>
-(例)`$echo e > /dev/myled0`
 # ライセンス
 GNU General Public License v3.0
 <https://github.com/2020Robot3team/Robot_Systems/blob/main/LICENSE>
