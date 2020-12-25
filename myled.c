@@ -30,7 +30,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	   return -EFAULT;
 
 
-	 if(c == 'r'){
+	 if(c == 'r')
+	 {
 	                gpio_base[7] = 1 << 25; 
 	                msleep(600);
 	                gpio_base[10] = 1 << 25;
@@ -48,7 +49,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);		      
 
-	 } else if(c == 'M'){
+	 } else if(c == 'M')
+	 {
 		        gpio_base[7] = 1 << 25;  
 	                msleep(200);
 	                gpio_base[10] = 1 << 25;
@@ -58,7 +60,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);
 
-	 }  else if(c == 'e'){
+	 } else if(c == 'e')
+	 {
 		        gpio_base[7] = 1 << 25;   
 	                msleep(200);
 	                gpio_base[10] = 1 << 25;
@@ -72,7 +75,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
                         gpio_base[10] = 1 << 25;                                                                                            
 		        msleep(1000);    
 
-	 }  else if(c == 'p'){
+	 } else if(c == 'p')
+	 {
 		        gpio_base[7] = 1 << 25;   
 	                msleep(200);
 	                gpio_base[10] = 1 << 25;
@@ -82,7 +86,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	                gpio_base[10] = 1 << 25;
 		        msleep(1000);
 
-         }  else if(c == 'm') {
+         } else if(c == 'm') 
+	 {
 	                gpio_base[7] = 1 << 25;
 	                msleep(600);
 	                gpio_base[10] = 1 << 25;
