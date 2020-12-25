@@ -16,9 +16,10 @@ LEDの点滅の時間を調整しモールス信号として伝えます。
 <https://youtu.be/ZRvTmj3eVUU><br>
 メカニクス2のmを入力　<br>
 <https://youtu.be/yqfVk1uDf8c>
-# 実行手順
-`$git clone<https://github.com/2020Robot3team/Robot_Systems>`より
-リポジトリのインストール <br>
+# インストール方法
+`$git clone<https://github.com/2020Robot3team/Robot_Systems>`より <br>
+リポジトリのインストール
+# 使用方法
 `$cd Robot_Systems `<br>
 `$make`<br>
 `$sudo insmod myled.ko `<br>
