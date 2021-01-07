@@ -95,8 +95,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 		gpio_base[10] = 1 << 25;
 		msleep(1000);
 
-		
-	} else{for (i = 0; i < 5; i++ ){
+		} else{
+		for (i = 0; i < 5; i++ ){
 			gpio_base[7] = 1 << 25;
 			msleep(100);
 			gpio_base[10] = 1 << 25;
@@ -118,8 +118,8 @@ static ssize_t sushi_read(struct file* filp, char* buf, size_t count, loff_t* po
 }
 static struct file_operations led_fops = {
 	.owner = THIS_MODULE,
-		.write = led_write,
-		.read = sushi_read
+	.write = led_write,
+	.read = sushi_read
 };
 static int __init init_mod(void)
 {
